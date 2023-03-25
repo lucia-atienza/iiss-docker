@@ -28,7 +28,7 @@ Abrimos el fichero con un editor de texto como nano y editamos el contenido.
 4. Conectar `Ubuntu1` a la red `redDocker`.\
  `docker network connect redDocker Ubuntu1`
 5. Intentar hacer ping a `Ubuntu1` desde `Ubuntu2`. ¿Funciona? ¿Por qué?.\
-Hacemos `ping Ubuntu1` desde la máquina Ubuntu2, pero no funciona porque Ubuntu2 no está conectado a la red y por lo tanto no reconoce el nombre de Ubuntu1.
+Hacemos `ping Ubuntu1` desde la máquina Ubuntu2, pero no funciona porque Ubuntu2 no está conectado a la red y por lo tanto no reconoce el nombre de Ubuntu1.\
 ![width:600 center](../img/tarea2_5_1.png)
 6. Conectar `Ubuntu2` a la red `redDocker`.\
  `docker network connect redDocker Ubuntu2`
