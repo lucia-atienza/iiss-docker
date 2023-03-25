@@ -5,7 +5,7 @@
 1. Crear volumen compartido `volumenDocker`\
   `docker volume create --name volumenDocker`
 2. Crear un contenedor de Nginx que use el volumen `volumenDocker`.\
-  `docker run -d -p 80:80 --name nginx1 -v volumenDocker:/usr/share/nginx/html nginx
+  `docker run -d -p 80:80 --name nginx1 -v volumenDocker:/usr/share/nginx/html nginx`
 3. Modifique el contenido del fichero `index.html` incluyendo un saludo personal en lugar del texto por defecto.\
 Abrimos una terminal para modificar el contenido del fichero:
 `docker exec -it nginx bash`\
