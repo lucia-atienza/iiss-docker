@@ -1,5 +1,5 @@
 ## Practica 3 Docker - Parte 1
-Comentarios sobre el `docker-compose.yml`:
+Comentarios sobre el `docker-compose.yml`, en el que describimos la configuración de dos servicios: un contenedor de base de datos MySQL y un contenedor de Drupal con Apache:
 - `version: '3'`: especifica la versión de Docker Compose a usar
 -  `db` : a partir de aquí especificamos el servicio MySQL
 - `image: mysql:5.7 `: imagen de Docker a utilizar
