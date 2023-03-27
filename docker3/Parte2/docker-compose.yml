@@ -1,0 +1,31 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: example
+    networks:
+      - redDocker
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress
+    ports:
+      - "82:80"
+    environment:
+      - APACHE_SERVER_NAME=localhost
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      - redDocker
+networks:
+  redDocker:
